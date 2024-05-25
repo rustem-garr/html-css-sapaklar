@@ -1,0 +1,1841 @@
+:root {
+    --bg-color-active: red;
+    --bg-color-box: #aaa;
+    --bg-color-header: rgb(5, 187, 5);
+    --bg-color-highlight: #bbb;
+    --bg-color-hover: green;
+    --bg-color-light: white;
+    --bg-color-link: yellow;
+    --bg-color-nav: #1464c1;
+    --bg-color-semitransparent: hsla(0, 0%, 40%, 0.8);
+    --bg-color-visited: #ccc;
+    --bg-color: #eee;
+    --border-baseline: 2px solid gray;
+    --border-bounds: 1px solid gray;
+    --border-container: 2px solid #ccc;
+    --border-flex: 1px dashed #777;
+    --border-guides: 1px dashed black;
+    --border-header: 2px solid rgb(15, 213, 15);
+    --border-separator: 1px dashed #aaa;
+    --border-subtle: 1px solid #999;
+    --border-table: 2px solid black;
+    --font-color-added: green;
+    --font-color-dark: black;
+    --font-color-light: white;
+    --font-color-medium: #777;
+    --font-family-code: "Source Code Pro", monospace;
+    --font-family-main: "Source Sans Pro", sans-serif;
+    --height-size-box: 100px;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: var(--bg-color-nav);
+    min-width: 100px;
+    min-height: 40px;
+    width: 100%;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+}
+
+nav > ul.left {
+    padding-left: 10px;
+}
+
+nav > ul > li {
+    margin: 0px 20px;
+    color: var(--font-color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--font-color-light);
+    text-decoration: none;
+}
+
+nav .social-logo {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family-main);
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    width: 100%;
+    max-width: 2400px;
+}
+
+@media (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+    nav {
+        min-height: 60px;
+    }
+    nav .social-logo {
+        width: 32px;
+        height: 32px;
+    }
+    nav > ul.left {
+        padding-left: 20px;
+    }
+}
+
+.size-boxes {
+    display: none;
+}
+
+#html,
+#animation-transitions {
+    padding-top: 60px;
+}
+
+.size-box {
+    z-index: 1000;
+    position: fixed;
+    height: var(--height-size-box);
+    width: var(--height-size-box);
+    top: 52px;
+    color: var(--font-color-light);
+    text-align: center;
+    line-height: var(--height-size-box);
+}
+
+.size-box.box-1 {
+    left: calc(0 * var(--height-size-box));
+    background-color: rgba(0%, 0%, 100%, 0.7);
+}
+.size-box.box-2 {
+    left: calc(1 * var(--height-size-box));
+    background-color: rgba(20%, 0%, 80%, 0.7);
+}
+.size-box.box-3 {
+    left: calc(2 * var(--height-size-box));
+    background-color: rgba(40%, 0%, 60%, 0.7);
+}
+.size-box.box-4 {
+    left: calc(3 * var(--height-size-box));
+    background-color: rgba(60%, 0%, 40%, 0.7);
+}
+.size-box.box-5 {
+    left: calc(4 * var(--height-size-box));
+    background-color: rgba(80%, 0%, 20%, 0.7);
+}
+.size-box.box-6 {
+    left: calc(5 * var(--height-size-box));
+    background-color: rgba(0%, 0%, 100%, 0.7);
+}
+.size-box.box-7 {
+    left: calc(6 * var(--height-size-box));
+    background-color: rgba(20%, 0%, 80%, 0.7);
+}
+.size-box.box-8 {
+    left: calc(7 * var(--height-size-box));
+    background-color: rgba(40%, 0%, 60%, 0.7);
+}
+.size-box.box-9 {
+    left: calc(8 * var(--height-size-box));
+    background-color: rgba(60%, 0%, 40%, 0.7);
+}
+.size-box.box-10 {
+    left: calc(9 * var(--height-size-box));
+    background-color: rgba(80%, 0%, 20%, 0.7);
+}
+.size-box.box-11 {
+    left: calc(10 * var(--height-size-box));
+    background-color: rgba(0%, 0%, 100%, 0.7);
+}
+.size-box.box-12 {
+    left: calc(11 * var(--height-size-box));
+    background-color: rgba(20%, 0%, 80%, 0.7);
+}
+.size-box.box-13 {
+    left: calc(12 * var(--height-size-box));
+    background-color: rgba(40%, 0%, 60%, 0.7);
+}
+.size-box.box-14 {
+    left: calc(13 * var(--height-size-box));
+    background-color: rgba(60%, 0%, 40%, 0.7);
+}
+.size-box.box-15 {
+    left: calc(14 * var(--height-size-box));
+    background-color: rgba(80%, 0%, 20%, 0.7);
+}
+.size-box.box-16 {
+    left: calc(15 * var(--height-size-box));
+    background-color: rgba(0%, 0%, 100%, 0.7);
+}
+.size-box.box-17 {
+    left: calc(16 * var(--height-size-box));
+    background-color: rgba(20%, 0%, 80%, 0.7);
+}
+.size-box.box-18 {
+    left: calc(17 * var(--height-size-box));
+    background-color: rgba(40%, 0%, 60%, 0.7);
+}
+.size-box.box-19 {
+    left: calc(18 * var(--height-size-box));
+    background-color: rgba(60%, 0%, 40%, 0.7);
+}
+.size-box.box-20 {
+    left: calc(19 * var(--height-size-box));
+    background-color: rgba(80%, 0%, 20%, 0.7);
+}
+.size-box.box-21 {
+    left: calc(20 * var(--height-size-box));
+    background-color: rgba(0%, 0%, 100%, 0.7);
+}
+.size-box.box-22 {
+    left: calc(21 * var(--height-size-box));
+    background-color: rgba(20%, 0%, 80%, 0.7);
+}
+.size-box.box-23 {
+    left: calc(22 * var(--height-size-box));
+    background-color: rgba(40%, 0%, 60%, 0.7);
+}
+.size-box.box-24 {
+    left: calc(23 * var(--height-size-box));
+    background-color: rgba(60%, 0%, 40%, 0.7);
+}
+/* Snippets explain a CSS property, HTML element, 
+or a single concept. */
+.snippet {
+    vertical-align: top;
+    margin: 1vmin;
+    background-color: var(--bg-color);
+    border-radius: 6px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+@media (min-width: 800px) {
+    .snippet {
+        margin: 8px;
+    }
+}
+
+.container {
+    margin: 0;
+    background-color: var(--bg-color-light);
+    border: var(--border-container);
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 6px 12px;
+}
+
+.snippet > h2 {
+    background-color: var(--bg-color-header);
+    color: var(--font-color-light);
+    font-size: 1em;
+    font-weight: normal;
+}
+
+section > h1 {
+    grid-column: 1/-1;
+}
+
+section > h2 {
+    border-radius: 8px;
+    border: var(--border-header);
+    color: var(--font-color-dark);
+    display: block;
+    font-size: 1.4em;
+    font-weight: normal;
+    grid-column: 1/-1;
+    margin-top: 1em;
+    padding: 0.5em 0.75em;
+}
+
+@media (min-width: 900px) {
+    section > h2 {
+        font-size: 1.5em;
+    }
+}
+
+section > h3,
+.snippet > h3,
+.callout > h3,
+.container > h3 {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: var(--font-color-medium);
+    background-color: initial;
+}
+
+section > h3 {
+    grid-column: 1/-1;
+}
+
+code,
+.code,
+span.code {
+    font-family: var(--font-family-code);
+    white-space: pre;
+}
+
+code,
+span.code {
+    color: var(--font-color-dark);
+}
+
+code {
+    display: block;
+    font-size: 0.85em;
+}
+
+.callout {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 16px 24px;
+}
+
+@media (min-width: 600px) {
+    .callout {
+        align-items: center;
+        margin: 16px 0;
+    }
+}
+
+#css-positioning-fixed {
+    border: 4px double black;
+}
+
+.codeblock {
+    padding: 16px 24px;
+    overflow: scroll;
+}
+
+.codeblock.ex-header {
+    margin: 8px;
+    padding: 0;
+}
+
+.ex-header h1 {
+    font-size: 2em;
+}
+
+.codeblock > hr {
+    border-top: var(--border-subtle);
+}
+
+/* Formatting code in headers. Default header padding 
+makes code look too loose. */
+.code.top {
+    padding-bottom: 0;
+}
+
+.code.mid {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.code.bot {
+    padding-top: 0;
+}
+
+code.subtle {
+    color: var(--font-color-medium);
+    font-size: 0.5em;
+    padding: 4px;
+}
+
+.tooltip {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: transparent;
+    font-size: 0.7em;
+    position: absolute;
+    transition: 0.5s;
+    padding: 0.5em 1em;
+    margin-top: 0;
+    z-index: 1000;
+}
+
+.ex-tooltip:hover > .tooltip,
+.codeblock:hover > .tooltip {
+    background-color: yellow;
+    border-color: black;
+    color: black;
+    font-size: 1.2em;
+}
+
+.ex-transition-translate .box {
+    transition: 1s all;
+}
+
+.ex-transition-translate:hover .box {
+    transform: translateX(200px);
+}
+
+section {
+    padding: 0 0;
+    margin: 0 0.5em;
+}
+
+@media (min-width: 600px) {
+    section {
+        margin: 0 1em;
+    }
+}
+
+.box,
+.bar,
+.content-box {
+    background-color: var(--bg-color-box);
+    color: var(--font-color-light);
+}
+
+.box.transform {
+    line-height: 1.5em;
+}
+
+.box,
+.bar {
+    font-family: var(--font-family-code);
+    display: inline-block;
+    border-radius: 4px;
+    min-height: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box.to-clear {
+    padding: 8px;
+}
+
+.bar.vertical {
+    min-height: 0;
+    min-width: 1.5em;
+}
+
+.box {
+    min-width: 1.5em;
+    margin: 4px;
+}
+
+.box.absolute {
+    position: absolute;
+    left: auto;
+    margin: 0;
+}
+
+.box.placeholder {
+    background-color: var(--bg-color-light);
+    color: var(--font-color-medium);
+}
+
+.box.invisible {
+    visibility: hidden;
+    margin: 16px;
+}
+
+.box.bigger {
+    font-size: 1.5em;
+}
+
+.box.biggest {
+    font-size: 2em;
+}
+
+.box.flatter {
+    min-height: 8px;
+    margin: 2px;
+}
+
+.box.wider {
+    min-width: 3em;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.box.nomargin {
+    margin: 0;
+}
+
+.box.square {
+    border-radius: 0;
+}
+
+/* Styles for creating figures related to the Box model */
+
+.margin-box,
+.border-box,
+.padding-box,
+.content-box {
+    padding: 1em;
+    padding-top: 0em;
+}
+
+.ex-box-sizing {
+    max-width: 11em;
+}
+
+.border-box {
+    background-color: lightgrey;
+}
+
+.ex-margin {
+    display: inline-block;
+    border: var(--border-subtle);
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ex-padding {
+    border: var(--border-subtle);
+    margin: 0;
+    position: relative;
+    border-radius: 0;
+}
+
+.ex-padding,
+.padding-box {
+    background-color: hsl(120, 20%, 75%);
+}
+
+.padding-color {
+    margin: 0;
+}
+
+.content-box {
+    padding: 0.5em;
+    text-indent: 0;
+}
+
+.margin-box,
+.ex-margin {
+    background-color: hsla(50, 100%, 50%, 0.2);
+}
+
+.margin-box {
+    text-indent: -0.75em;
+}
+
+.inline {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.inline-block {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.ex-positioned {
+    position: relative;
+    border: 4px double black;
+    border-radius: 4px;
+}
+
+.flex {
+    border: var(--border-flex);
+    border-radius: 4px;
+    display: flex;
+    --taller-height: 5em;
+}
+
+.flex.inline {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.flex.ex-wrap {
+    width: 10em;
+}
+
+.flex.ex-align-items {
+    height: var(--taller-height);
+}
+
+.flex.ex-align-content {
+    height: var(--taller-height);
+    flex-wrap: wrap;
+}
+
+.flex.ex-align-self {
+    height: var(--taller-height);
+}
+
+.flex.ex-flow {
+    border: none;
+}
+
+.ex-css-height {
+    display: flex;
+    align-items: flex-end;
+}
+
+div.line:after,
+div.line-short:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border-top: var(--border-baseline);
+    width: 7em;
+    margin-left: 8px;
+}
+
+div.line-short:after {
+    width: 3.5em;
+    /* margin-left: 12px; */
+}
+
+div.columns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+div.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* For the flexbox 'order' property snippet. */
+.first,
+.second {
+    order: 1;
+}
+
+.font-example {
+    display: inline-block;
+    font-size: 32px;
+}
+
+a:link,
+a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+
+.nudge-top {
+    padding-top: 10px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.ex-overflow-box {
+    display: inline-block;
+    border: var(--border-subtle);
+    width: 250px;
+    height: 80px;
+}
+
+.ex-overflow-box.hidden {
+    overflow: hidden;
+}
+
+.ex-overflow-box.scroll {
+    overflow: scroll;
+}
+
+.ex-overflow-box.visible {
+    overflow: visible;
+}
+
+.text-example {
+    border-bottom: var(--border-separator);
+}
+
+.text-example.align {
+    max-width: 8em;
+}
+
+.ex-border-width {
+    border-color: black;
+    border-style: solid;
+}
+
+.ex-float,
+.ex-clear {
+    width: 14em;
+    border: var(--border-subtle);
+    padding: 4px;
+    display: inline-block;
+    margin: 4px;
+}
+
+.ex-clear-row {
+    display: flex;
+    align-items: stretch;
+}
+
+.ex-border.dark,
+.ex-border.light {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 4px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.ex-border.light {
+    background-color: transparent;
+}
+
+.ex-border-side {
+    border: 3px solid black;
+    border-radius: 0;
+}
+
+.ex-border-side.single {
+    border-width: 0;
+}
+
+.ex-fixed {
+    position: fixed;
+    background-color: var(--bg-color-semitransparent);
+    min-width: 30%;
+    min-height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex-fixed > code {
+    color: var(--font-color-light);
+    font-size: 1em;
+}
+
+.table {
+    display: table;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.ex-table,
+.ex-element,
+.ex-form,
+.ex-list,
+.ex-keyframe {
+    border-bottom: var(--border-separator);
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+
+.ex-full-table {
+    background-color: initial;
+}
+
+.ex-full-table td {
+    border: var(--border-table);
+}
+
+.ex-full-table th {
+    width: 40%;
+}
+
+.row {
+    display: table-row;
+}
+
+.center {
+    text-align: center;
+}
+
+td {
+    padding: 8px;
+    height: 1em;
+    width: 1em;
+    text-align: center;
+}
+
+.row > .codeblock {
+    display: table-cell;
+}
+
+table.border,
+tr.border,
+td.border {
+    border: var(--border-table);
+}
+
+table.column-borders td + td {
+    border-left: var(--border-table);
+}
+
+table.row-borders tr + tr {
+    border-top: var(--border-table);
+}
+
+table.all-borders td {
+    border: var(--border-table);
+}
+
+.ex-caption {
+    /* padding: 12px 36px; */
+    padding: 8px;
+    border-bottom: var(--border-separator);
+}
+
+.highlight-border {
+    border: 2px solid red;
+}
+
+.highlight {
+    background-color: var(--bg-color-highlight);
+    color: var(--font-color-light);
+}
+
+.ex-vertical-align {
+    display: flex;
+}
+
+.ex-vertical-align-cell {
+    border: var(--border-table);
+    width: 4em;
+    height: 5em;
+    text-align: center;
+}
+
+.cell > .codeblock {
+    padding: 0 0 8px 0;
+}
+
+.ex-vertical-align-text {
+    display: inline-block;
+    border-bottom: var(--border-separator);
+    white-space: nowrap;
+}
+
+.ex-align-box {
+    display: inline-flex;
+    align-items: center;
+    min-width: 3em;
+    min-height: 3em;
+    background-color: var(--bg-color-box);
+    border-radius: 4px;
+    margin: 4px;
+    justify-content: center;
+    text-align: center;
+    color: var(--font-color-light);
+}
+
+.ex-zindex {
+    position: relative;
+    height: 6em;
+    border-bottom: var(--border-separator);
+}
+
+.box-zindex {
+    align-items: flex-end;
+    background-color: var(--bg-color-box);
+    bottom: 30px;
+    color: var(--font-color-light);
+    display: flex;
+    height: 3em;
+    justify-content: flex-end;
+    left: 30px;
+    padding: 4px;
+    position: relative;
+    width: 3em;
+}
+
+.box-zindex.placeholder {
+    align-items: flex-start;
+    font-size: 1em;
+    left: 0;
+    justify-content: flex-start;
+    top: 0;
+}
+
+.stack {
+    grid-column: 1/-1;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.ex-full-table-elements {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 500px) {
+    .ex-full-table-elements {
+        flex-direction: row;
+    }
+}
+
+.ex-full-table-elements > code {
+    padding-right: 36px;
+}
+
+.ex-full-table-elements th {
+    border: 2px solid black;
+}
+
+.ex-css-element > code {
+    font-family: var(--font-family-code);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.ex-css-element {
+    border-bottom: var(--border-separator);
+    padding: 0 0 8px 8px;
+}
+
+.ex-css {
+    display: block;
+    flex-wrap: wrap;
+    max-width: 500px;
+    justify-content: space-between;
+}
+
+.ps-link:link {
+    background-color: var(--bg-color-link);
+}
+
+.ps-link:visited {
+    background-color: var(--bg-color-visited);
+}
+
+.ps-link:hover {
+    background-color: var(--bg-color-hover);
+}
+
+.ps-link:active {
+    background-color: var(--bg-color-active);
+}
+
+.ps-active:active {
+    background-color: var(--bg-color-active);
+}
+
+.ps-hover:hover {
+    background-color: var(--bg-color-hover);
+}
+
+.ps-target,
+.ps-active,
+.ps-hover,
+.ps-plain {
+    background-color: var(--bg-color-visited);
+}
+
+.ps-target:target {
+    background-color: var(--bg-color-active);
+}
+
+.ex-pseudo {
+    border-bottom: var(--border-separator);
+    padding-bottom: 8px;
+}
+
+.ex-pseudo > a {
+    display: block;
+    padding: 8px;
+}
+
+.ps-after::after {
+    content: " The added content.";
+    color: var(--font-color-added);
+}
+
+.ps-before::before {
+    content: " The added content.";
+    color: var(--font-color-added);
+}
+
+.underline {
+    position: relative;
+}
+
+.underline::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-top: var(--border-subtle);
+    width: 70%;
+}
+
+.overline {
+    position: relative;
+}
+
+.overline::before {
+    position: absolute;
+    content: "";
+    display: block;
+    border-bottom: var(--border-subtle);
+    width: 70%;
+}
+
+.transition .box {
+    margin-left: 0%;
+    transition: 1s;
+}
+
+.transition:hover .box {
+    margin-left: 80%;
+}
+
+.ex-transition.property .box {
+    transition: 2s;
+    color: var(--font-color-dark);
+}
+
+.ex-transition.property {
+    transition: 2s;
+    --bg-transition: red;
+    --font-color-transition: white;
+    --margin-transition: 80%;
+}
+
+.ex-transition:hover.property.all .box {
+    background-color: var(--bg-transition);
+    color: var(--font-color-transition);
+    margin-left: var(--margin-transition);
+}
+
+.ex-transition:hover.property.color .box {
+    color: var(--font-color-transition);
+}
+
+.ex-transition:hover.property.margin .box {
+    margin-left: var(--margin-transition);
+}
+
+.ex-transition:hover.property.background .box {
+    background-color: var(--bg-transition);
+}
+
+.ex-transition-timing-function,
+.ex-animation-timing-function {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: column;
+}
+
+.animation:hover .box {
+    animation: slideright 1s infinite linear;
+}
+
+.animation.alternate .box {
+    animation-direction: alternate;
+}
+
+.animation.ex-animation-fill-mode:hover .box {
+    animation: slideright 1s 1 1s, colorshift 1s 1 1s;
+}
+
+.animation:hover .fillmode-delay {
+    animation: showblue 1s step-start;
+}
+
+.animation:hover .fillmode-animate {
+    animation: showred 1s step-start 1s;
+}
+
+.animation:hover .fillmode-end {
+    animation: showblack 0.1s step-start 2s forwards;
+}
+
+.animation .fillmode-delay,
+.animation .fillmode-animate,
+.animation .fillmode-end {
+    color: transparent;
+}
+
+.animation:hover .fillmode-initial {
+    color: transparent;
+}
+
+.animation:hover .box.backgroundcolor {
+    animation: showbackground 2s forwards;
+}
+
+.animation:hover .box.size {
+    animation: growsize 2s forwards;
+}
+
+@keyframes slideright {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 80%;
+    }
+}
+
+@keyframes colorshift {
+    from {
+        color: blue;
+    }
+    to {
+        color: red;
+    }
+}
+
+@keyframes showblue {
+    to {
+        color: blue;
+    }
+}
+@keyframes showred {
+    to {
+        color: red;
+    }
+}
+
+@keyframes showblack {
+    to {
+        color: black;
+    }
+}
+
+@keyframes showbackground {
+    from {
+        background-color: blue;
+    }
+    to {
+        background-color: red;
+    }
+}
+
+@keyframes growsize {
+    from {
+        height: 1em;
+        width: 1em;
+    }
+    to {
+        height: 4em;
+        width: 4em;
+    }
+}
+
+/* This adds space before the target of a link, to put the target below the navbar. */
+/* XXX Broken by grid layout? */
+:target:before {
+    content: "";
+    display: block;
+    height: 60px;
+    margin: -60px 0 0;
+}
+
+/* Example cursor animation */
+.animation:hover .cursor {
+    animation: cursor 0.8s infinite step-end;
+}
+
+.cursor {
+    height: 80px;
+    border-left: 8px solid black;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.animation:hover .animated {
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+}
+
+.ex-transform {
+    display: inline-block;
+    position: relative;
+    perspective: 100px;
+}
+
+.ex-transform.lr-border {
+    border: var(--border-guides);
+    border-width: 0 1px;
+    border-radius: 0;
+}
+
+.ex-transform.tb-border {
+    border: var(--border-guides);
+    border-width: 1px 0;
+    border-radius: 0;
+}
+
+.ex-translate {
+    width: 60px;
+    height: 60px;
+    border: var(--border-bounds);
+    perspective: 60px;
+    perspective-origin: top left;
+}
+
+.ex-perspective {
+    height: 80px;
+    width: 50px;
+    position: relative;
+}
+
+.ex-perspective {
+    margin: 10px 0 -25px 10px;
+}
+
+.ex-perspective.right-bottom {
+    perspective-origin: 300% 200%;
+}
+
+.ex-perspective.left-bottom {
+    perspective-origin: -300% 200%;
+}
+
+.ex-perspective.center {
+    perspective-origin: 50% 50%;
+    margin: 0 0 -30px 0;
+}
+
+.ex-perspective.right-top {
+    perspective-origin: 300% -200%;
+}
+
+.ex-perspective.left-top {
+    perspective-origin: -300% -200%;
+    /* margin: 20px; */
+    /* margin-bottom: 0; */
+}
+
+.cube {
+    perspective: 400px;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+.face {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: white;
+    line-height: 40px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.face.front {
+    transform: translateZ(20px);
+    background-color: rgba(30%, 30%, 30%, 0.7);
+}
+
+.face.top {
+    transform: rotateX(90deg) translateZ(20px);
+    background-color: rgba(0%, 100%, 0%, 0.7);
+}
+
+.face.right {
+    transform: rotateY(90deg) translateZ(20px);
+    background-color: rgba(0%, 0%, 100%, 0.7);
+}
+
+.face.left {
+    transform: rotateY(-90deg) translateZ(20px);
+    background-color: rgba(100%, 0%, 0%, 0.7);
+}
+
+.face.bottom {
+    transform: rotateX(-90deg) translateZ(20px);
+    background-color: rgba(100%, 0%, 100%, 0.7);
+}
+
+.face.back {
+    transform: rotateY(180deg) translateZ(20px);
+    background-color: rgba(25%, 50%, 75%, 0.7);
+}
+
+table.transform-origin {
+    margin: 16px 0 16px 16px;
+}
+
+.perspective {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.perspective > .codeblock {
+    overflow: hidden;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ex-transform-origin {
+    border: var(--border-bounds);
+    display: inline-block;
+    perspective: 100px;
+    margin-bottom: 10px;
+}
+
+.transform-origin .codeblock {
+    padding: 16px 16px 0 12px;
+}
+
+table.transform-origin > caption {
+    margin-left: 15%;
+}
+
+.door {
+    height: 40px;
+    width: 40px;
+    background-color: var(--bg-color-box);
+    color: var(--font-color-light);
+    line-height: 40px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.door.rotate-y {
+    transform: rotateY(60deg);
+}
+.door.rotate-y2 {
+    transform: rotateY(-60deg);
+}
+.door.rotate-x {
+    transform: rotateX(60deg);
+}
+.door.rotate-x2 {
+    transform: rotateX(-60deg);
+}
+.door.rotate-z {
+    transform: rotateZ(45deg);
+}
+
+.transform-origin td {
+    text-align: left;
+}
+
+/* Card transition */
+.ex-card:hover .card {
+    transform: rotateY(180deg) translateX(100%);
+}
+
+.ex-card {
+    perspective: 300px;
+}
+
+.card {
+    transition: 0.7s;
+    transform-style: preserve-3d;
+    transform-origin: right;
+    position: relative;
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.card-back {
+    transform: rotateY(180deg) translateZ(1px);
+}
+
+/* Card styling */
+.card {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: var(--font-color-light);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.card-front {
+    background-color: var(--bg-color-box);
+}
+
+.card-back {
+    background-color: purple;
+}
+
+#transform-rotate .codeblock {
+    padding: 8px;
+}
+
+iframe {
+    background-color: var(--bg-color-light);
+    margin: 20px;
+    margin-top: 0;
+}
+
+.ex-grid {
+    display: grid;
+    grid-gap: 4px;
+}
+
+.ex-grid.inline {
+    display: inline-grid;
+}
+
+.ex-grid.template-rows {
+    grid-template-columns: 1fr;
+}
+
+.grid-template-rows-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: flex-end;
+}
+
+.grid-column-container,
+.grid-row-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ex-grid > .box {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.ex-box-shadow {
+    margin-bottom: 20px;
+}
+
+.ex-grid.grid-column {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ex-grid.grid-row {
+    display: inline-grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ex-grid.grid-area {
+    display: inline-grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ex-grid.grid-template-area {
+    display: grid;
+}
+
+.grid-area-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.ex-grid.grid-auto-flow {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-auto-flow-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: flex-end;
+    grid-gap: 8px;
+}
+
+.grid-heading {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.ex-grid.grid-gap {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-gap-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Grids for laying out the cheat sheet itself */
+
+.grid {
+    display: grid;
+}
+
+.grid.col-5 {
+    grid-template-columns: 1fr;
+}
+.grid.col-4 {
+    grid-template-columns: 1fr;
+}
+.grid.col-3 {
+    grid-template-columns: 1fr;
+}
+.grid.col-2 {
+    grid-template-columns: 1fr;
+}
+
+.grid.center {
+    align-items: center;
+}
+
+@media (min-width: 400px) {
+    .grid.col-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid.col-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid.col-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid.col-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 500px) {
+    .grid.col-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid.col-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid.col-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid.col-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 600px) {
+    .grid.col-5 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .grid.col-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid.col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid.col-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid.col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .grid.col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .grid.col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid.col-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+section {
+    display: grid;
+    grid-column: 1/-1; /* Sections are nested. */
+}
+
+/* We choose sizes of 100px large column format because it has many divisors: 
+
+Similarly the other breakpoints have the most divisors of smaller numbers:
+4 -- 1,2,4
+6 -- 1,2,3,6
+12 -- 1,2,3,4,6,12
+18 -- 1,2,3,6,9,18
+24 -- 1,2,3,4,6,8,12,24
+*/
+@media (max-width: 400px) {
+    section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (min-width: 400px) {
+    section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 600px) {
+    section {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+@media (min-width: 1200px) {
+    section {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+@media (min-width: 1800px) {
+    section {
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+@media (min-width: 2400px) {
+    section {
+        grid-template-columns: repeat(24, 1fr);
+    }
+}
+
+/* Grid layout - columns */
+@media (max-width: 400px) {
+    .snippet {
+        grid-column: span 1;
+    }
+    .span-1 {
+        grid-column: span 1;
+    }
+    .span-2 {
+        grid-column: span 1;
+    }
+    .span-3 {
+        grid-column: span 1;
+    }
+    .span-4 {
+        grid-column: span 1;
+    }
+    .span-5 {
+        grid-column: span 1;
+    }
+    .span-6 {
+        grid-column: span 1;
+    }
+    .span-7 {
+        grid-column: span 1;
+    }
+    .span-8 {
+        grid-column: span 1;
+    }
+    .span-9 {
+        grid-column: span 1;
+    }
+    .span-10 {
+        grid-column: span 1;
+    }
+    .span-11 {
+        grid-column: span 1;
+    }
+    .span-12 {
+        grid-column: span 1;
+    }
+}
+
+@media (min-width: 400px) {
+    .snippet {
+        grid-column: span 2;
+    }
+    .span-1 {
+        grid-column: span 1;
+    }
+    .span-2 {
+        grid-column: span 2;
+    }
+    .span-3 {
+        grid-column: span 3;
+    }
+    .span-4 {
+        grid-column: span 4;
+    }
+    .span-5 {
+        grid-column: span 4;
+    }
+    .span-6 {
+        grid-column: span 4;
+    }
+    .span-7 {
+        grid-column: span 4;
+    }
+    .span-8 {
+        grid-column: span 4;
+    }
+    .span-9 {
+        grid-column: span 4;
+    }
+    .span-10 {
+        grid-column: span 4;
+    }
+    .span-11 {
+        grid-column: span 4;
+    }
+    .span-12 {
+        grid-column: span 4;
+    }
+}
+
+@media (min-width: 600px) {
+    .snippet {
+        grid-column: span 3;
+    }
+    .span-1 {
+        grid-column: span 1;
+    }
+    .span-2 {
+        grid-column: span 2;
+    }
+    .span-3 {
+        grid-column: span 3;
+    }
+    .span-4 {
+        grid-column: span 4;
+    }
+    .span-5 {
+        grid-column: span 5;
+    }
+    .span-6 {
+        grid-column: span 6;
+    }
+    .span-7 {
+        grid-column: span 6;
+    }
+    .span-8 {
+        grid-column: span 6;
+    }
+    .span-9 {
+        grid-column: span 6;
+    }
+    .span-10 {
+        grid-column: span 6;
+    }
+    .span-11 {
+        grid-column: span 6;
+    }
+    .span-12 {
+        grid-column: span 6;
+    }
+}
+
+@media (min-width: 1200px) {
+    .snippet {
+        grid-column: span 3;
+    }
+    .span-1 {
+        grid-column: span 1;
+    }
+    .span-2 {
+        grid-column: span 2;
+    }
+    .span-3 {
+        grid-column: span 3;
+    }
+    .span-4 {
+        grid-column: span 4;
+    }
+    .span-5 {
+        grid-column: span 5;
+    }
+    .span-6 {
+        grid-column: span 6;
+    }
+    .span-7 {
+        grid-column: span 7;
+    }
+    .span-8 {
+        grid-column: span 8;
+    }
+    .span-9 {
+        grid-column: span 9;
+    }
+    .span-10 {
+        grid-column: span 10;
+    }
+    .span-11 {
+        grid-column: span 11;
+    }
+    .span-12 {
+        grid-column: span 12;
+    }
+}
+
+/* Grid layout - rows */
+.span-rows-1 {
+    grid-row: span 1;
+}
+.span-rows-2 {
+    grid-row: span 2;
+}
+.span-rows-3 {
+    grid-row: span 3;
+}
+.span-rows-4 {
+    grid-row: span 4;
+}
+.span-rows-5 {
+    grid-row: span 5;
+}
+.span-rows-6 {
+    grid-row: span 6;
+}
+
+#css-padding,
+#css-margin {
+    grid-column: 1/span 4;
+}
+
+#css-width {
+    grid-column: 1/span 6;
+}
