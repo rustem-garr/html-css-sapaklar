@@ -1,4 +1,4 @@
-Aşakdaky ssylka basyp siz HTML, CSS we CSS Animasiýa işleýiş düzgünlerniň mysallarny görüp bilersiňiz:
+Aşakdaky ssylka basyp siz HTML, CSS we CSS Animasiýa işleýiş düzgünlerniň mysallarny görüp bilersiňiz: </br>
 https://rustem-garr.github.io/html-css-sapaklar/
 
 Ýa-da şu asakdaky qrcode skan edip html-css-animasiýa sapaklar saýta geçip bilersiňiz:
